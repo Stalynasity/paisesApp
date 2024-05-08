@@ -1,5 +1,5 @@
 import { pais } from './../../interface/pais.interface';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-table-list',
@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 export class TableListComponent {
 
   @Input() paises:pais[] = [];
-
+  @Output() addFav: EventEmitter<string> = new EventEmitter();
 
 
 }

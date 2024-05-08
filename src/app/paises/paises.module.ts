@@ -10,6 +10,7 @@ import { PorRegionComponent } from './pages/por-region/por-region.component';
 import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { TableListComponent } from './components/table-list/table-list.component';
 import { InputBusquedaComponent } from './components/input-busqueda/input-busqueda.component';
+import { FavoritePaisComponent } from './pages/favorite-pais/favorite-pais.component';
 
 
 
@@ -20,7 +21,8 @@ import { InputBusquedaComponent } from './components/input-busqueda/input-busque
     PorRegionComponent,
     VerPaisComponent,
     TableListComponent,
-    InputBusquedaComponent
+    InputBusquedaComponent,
+    FavoritePaisComponent
   ],
   imports: [
     CommonModule,

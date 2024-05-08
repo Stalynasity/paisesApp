@@ -9,6 +9,7 @@ import { pais } from '../interface/pais.interface';
 export class PaisService {
 
   private apiUrl: string = "https://restcountries.com/v3.1"
+  private favoritosKey: string = 'favoritos';
 
   constructor(
     private http: HttpClient
@@ -29,4 +30,29 @@ export class PaisService {
     const url = `${this.apiUrl}/alpha/${id}`
     return this.http.get<pais>(url);
   }
+
+  getRegion(text:string): Observable<pais[]>{
+    const url = `${this.apiUrl}/region/${text}`
+    return this.http.get<pais[]>(url);
+  }
+
+  // Método para agregar un país a la lista de favoritos en localStorage
+  agregarAFavoritos(pais: pais): void {
+    let favoritos: pais[] = this.obtenerFavoritos();
+    favoritos.push(pais);
+    localStorage.setItem(this.favoritosKey, JSON.stringify(favoritos));
+  }
+
+  // Método para obtener la lista de países favoritos desde localStorage
+  obtenerFavoritos(): pais[] {
+    let favoritosJson = localStorage.getItem(this.favoritosKey);
+    if (favoritosJson) {
+      return JSON.parse(favoritosJson);
+    }
+
+    return [];
+
+
+  }
+
 }

@@ -37,4 +37,8 @@ export class PorPaisComponent {
       }
     );
   }
+
+  agregarAFavoritos(pais: pais) {
+    this.PaisService.agregarAFavoritos(pais);
+  }
 }
