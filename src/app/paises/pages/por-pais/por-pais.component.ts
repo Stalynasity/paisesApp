@@ -14,6 +14,11 @@ export class PorPaisComponent {
 
   constructor(private PaisService: PaisService) {}
 
+  sugerencias(termino: string){
+    this.hayError= false;
+    //TODO: crear sugerencias
+    this.buscar(termino)
+  }
 
 
   buscar(termino: string) {
