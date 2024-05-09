@@ -12,6 +12,8 @@ export class PorPaisComponent {
   hayError: boolean = false;
   paises: pais[] = [];
 
+  Favoritos:pais[] = []
+
   constructor(private PaisService: PaisService) {}
 
   sugerencias(termino: string){
@@ -38,7 +40,5 @@ export class PorPaisComponent {
     );
   }
 
-  agregarAFavoritos(pais: pais) {
-    this.PaisService.agregarAFavoritos(pais);
-  }
+
 }

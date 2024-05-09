@@ -4,6 +4,7 @@ import { PorPaisComponent } from './paises/pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './paises/pages/por-region/por-region.component';
 import { PorCapitalComponent } from './paises/pages/por-capital/por-capital.component';
 import { VerPaisComponent } from './paises/pages/ver-pais/ver-pais.component';
+import { FavoritePaisComponent } from './paises/pages/favorite-pais/favorite-pais.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'capital',
     component: PorCapitalComponent
+  },
+  {
+    path: 'favoritos',
+    component: FavoritePaisComponent
   },
   {
     path:'pais/:id',
